@@ -18,15 +18,15 @@
 
 - **Fundamental Concepts**
 
-    - <a href="https://github.com/KattsonBastos/redis-learning/src/study-notes/01-data-types.md">**What Redis is?** </a>
+    - <a href="https://github.com/KattsonBastos/redis-learning/blob/main/study-notes/01-redis.md">**What Redis is?** </a>
 
-    - <a href="https://github.com/KattsonBastos/redis-learning/src/study-notes/01-redis.md">**A brief on Redis supported Data Types**</a>
+    - <a href="https://github.com/KattsonBastos/redis-learning/blob/main/study-notes/02-data-types.md">**A brief on Redis supported Data Types**</a>
 
 - **Code Practicing** (_TODO_)
 
     - **Basic Redis Commands** (_TODO_)
 
-    - **Using Redis With python - Basic Data Structures** - (<a href="https://github.com/KattsonBastos/redis-learning/src/redis-with-python/basic-data-structures.ipynb">Link to Notebook</a>)
+    - **Using Redis With python - Basic Data Structures** - (<a href="https://github.com/KattsonBastos/redis-learning/blob/main/src/redis-with-python/basic-data-structures.ipynb">Link to Notebook</a>)
 
     - **Using Redis With python - Other Data Structures** (_TODO_)
 
