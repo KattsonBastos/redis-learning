@@ -1,0 +1,34 @@
+version: '3.5'
+
+services:
+
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - 6379:6379
+    entrypoint: redis-server --appendonly yes
+    restart: always
+    networks:
+      - internalNet
+
+  jupyter_lab:
+    container_name: jupyter_lab
+    image: jupyter/datascience-notebook
+    ports: 
+      - "8888:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+    volumes: 
+      - ./src/redis-with-python:/home/jovyan/work 
+    networks:
+      - internalNet
+
+networks:
+  internalNet:
+    name: internal_net
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.20.0.0/16
+        gateway: 172.20.0.1
