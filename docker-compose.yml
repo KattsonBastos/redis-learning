@@ -21,6 +21,24 @@ services:
       - JUPYTER_ENABLE_LAB=yes
     volumes: 
       - ./src/redis-with-python:/home/jovyan/work 
+    #networks:
+      - internalNet
+
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: dbroot@123
+      MYSQL_DATABASE: db
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'dbuser@123'
+    ports: 
+      - "3306:3306"
+    expose:
+      - "3306"
     networks:
       - internalNet
 
